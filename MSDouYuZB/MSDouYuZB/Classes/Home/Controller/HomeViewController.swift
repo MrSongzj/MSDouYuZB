@@ -27,9 +27,9 @@ class HomeViewController: UIViewController {
         // 设置右侧 Items
         navigationItem.rightBarButtonItems =
             [UIBarButtonItem(normalImgName: "image_my_history", highlightImgName: "Image_my_history_click"),
-             UIBarButtonItem(width: 20),
+             UIBarButtonItem(width: 25),
              UIBarButtonItem(normalImgName: "btn_search", highlightImgName: "btn_search_clicked"),
-             UIBarButtonItem(width: 20),
+             UIBarButtonItem(width: 25),
              UIBarButtonItem(normalImgName: "Image_scan", highlightImgName: "Image_scan_click")]
     }
 }
