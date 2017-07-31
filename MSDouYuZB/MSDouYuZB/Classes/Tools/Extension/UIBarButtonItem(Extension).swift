@@ -10,18 +10,15 @@ import UIKit
 
 extension UIBarButtonItem {
     
-    convenience init(normalImgName: String, highlightImgName: String = "") {
-        let btn = UIButton()
+    convenience init(normalImgName: String, highlightImgName: String = "", width: CGFloat = 0) {
+        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: 44))
         btn.setImage(UIImage(named: normalImgName), for: .normal)
         if !highlightImgName.isEmpty {
             btn.setImage(UIImage(named: highlightImgName), for: .highlighted)
         }
-        btn.sizeToFit()
+        if width <= 0 {
+            btn.sizeToFit()
+        }
         self.init(customView: btn)
-    }
-    
-    convenience init(width: CGFloat) {
-        self.init(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        self.width = width
     }
 }
