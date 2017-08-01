@@ -18,6 +18,10 @@
 		061AA66B1F2B1DC6000BF15E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AA66A1F2B1DC6000BF15E /* MainViewController.swift */; };
 		061AA6761F2B1EAD000BF15E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AA6751F2B1EAD000BF15E /* HomeViewController.swift */; };
 		0654AAA31F2B2B7900174D77 /* UIBarButtonItem(Extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654AAA21F2B2B7900174D77 /* UIBarButtonItem(Extension).swift */; };
+		0654AAA51F2EBDE700174D77 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654AAA41F2EBDE700174D77 /* PageTitleView.swift */; };
+		0654AAA71F2ECE2800174D77 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654AAA61F2ECE2800174D77 /* Constant.swift */; };
+		0654AAA91F2F06D400174D77 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654AAA81F2F06D400174D77 /* PageContentView.swift */; };
+		0654AAAD1F2F0E5000174D77 /* UIColor(Extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654AAAC1F2F0E5000174D77 /* UIColor(Extension).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		061AA66A1F2B1DC6000BF15E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		061AA6751F2B1EAD000BF15E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0654AAA21F2B2B7900174D77 /* UIBarButtonItem(Extension).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem(Extension).swift"; sourceTree = "<group>"; };
+		0654AAA41F2EBDE700174D77 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		0654AAA61F2ECE2800174D77 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0654AAA81F2F06D400174D77 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		0654AAAC1F2F0E5000174D77 /* UIColor(Extension).swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor(Extension).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0654AAA11F2B2B5100174D77 /* Extension */,
+				0654AAA61F2ECE2800174D77 /* Constant.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -188,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				061AA6411F2ADA06000BF15E /* Main.storyboard */,
+				0654AAA41F2EBDE700174D77 /* PageTitleView.swift */,
+				0654AAA81F2F06D400174D77 /* PageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				0654AAA21F2B2B7900174D77 /* UIBarButtonItem(Extension).swift */,
+				0654AAAC1F2F0E5000174D77 /* UIColor(Extension).swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -344,8 +356,12 @@
 			files = (
 				061AA63E1F2ADA06000BF15E /* AppDelegate.swift in Sources */,
 				061AA66B1F2B1DC6000BF15E /* MainViewController.swift in Sources */,
+				0654AAA51F2EBDE700174D77 /* PageTitleView.swift in Sources */,
+				0654AAA91F2F06D400174D77 /* PageContentView.swift in Sources */,
 				0654AAA31F2B2B7900174D77 /* UIBarButtonItem(Extension).swift in Sources */,
 				061AA6761F2B1EAD000BF15E /* HomeViewController.swift in Sources */,
+				0654AAAD1F2F0E5000174D77 /* UIColor(Extension).swift in Sources */,
+				0654AAA71F2ECE2800174D77 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
