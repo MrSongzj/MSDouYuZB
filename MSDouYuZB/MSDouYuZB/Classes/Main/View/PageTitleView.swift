@@ -8,6 +8,11 @@
 
 import UIKit
 
+private let kNormalColor = UIColor.darkGray
+private let kHighlightColor = UIColor.orange
+private let kNormalColorRGBA = kNormalColor.getRGBA()
+private let kHighlightColorRGBA = kHighlightColor.getRGBA()
+
 protocol PageTitleViewDelegate: class {
     func pageTitleView(_ view: PageTitleView, didSelectedAt index: Int)
 }
@@ -24,6 +29,7 @@ class PageTitleView: UIView {
         let v = UIScrollView()
         v.showsHorizontalScrollIndicator = false
         v.scrollsToTop = false
+        v.bounces = false
         return v
     }()
     private lazy var scrollLine: UIView = {
@@ -44,15 +50,40 @@ class PageTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Publick Methods
+    // 滑动 titleView
+    func scrollTitle(progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        
+        let sourceLB = titleLBs[sourceIndex]
+        let targetLB = titleLBs[targetIndex]
+        
+        // 改变字体颜色
+        sourceLB.textColor = UIColor.transferRGBA(kHighlightColorRGBA, toRGBA: kNormalColorRGBA, progress: progress)
+        targetLB.textColor = UIColor.transferRGBA(kNormalColorRGBA, toRGBA: kHighlightColorRGBA, progress: progress)
+        // 滚动 scrollLine
+        let startX = sourceLB.frame.origin.x
+        let endX = targetLB.frame.origin.x
+        scrollLine.frame.origin.x = startX + (endX - startX)*progress
+        // 更新当前索引
+        if progress == 1 {
+            currentIndex = targetIndex
+        }
+    }
+    
     // MARK: - Actions
      @objc private func tapLB(sender: UITapGestureRecognizer) {
         guard let tapLB = sender.view as? UILabel else { return }
         guard tapLB.tag != currentIndex  else { return }
         
-        let lastLB = titleLBs[currentIndex]
         // 改变颜色
-        tapLB.textColor = UIColor.orange
-        lastLB.textColor = UIColor.darkGray
+        tapLB.textColor = kHighlightColor
+//        let lastLB = titleLBs[currentIndex]
+//        lastLB.textColor = kNormalColor
+        for lb in titleLBs {
+            if lb !== tapLB {
+                lb.textColor = kNormalColor
+            }
+        }
         
         currentIndex = tapLB.tag
 

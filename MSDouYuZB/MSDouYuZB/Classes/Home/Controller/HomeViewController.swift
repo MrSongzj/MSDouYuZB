@@ -10,8 +10,10 @@ import UIKit
 
 private let kPageTitleVH: CGFloat = 40
 
-class HomeViewController: UIViewController, PageTitleViewDelegate {
-    
+class HomeViewController: UIViewController,
+PageTitleViewDelegate,
+PageContentViewDelegate
+{
     // MARK: - 属性
     private lazy var pageTitleV: PageTitleView = {
         let v = PageTitleView(frame: CGRect(x: 0, y: kNavigationBarBottom, width: kScreenW, height: kPageTitleVH), titles: ["推荐", "游戏", "娱乐", "趣玩"])
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController, PageTitleViewDelegate {
             vcs.append(vc)
         }
         let v = PageContentView(frame: frame, childVCs: vcs, parentVC: self)
-        v.backgroundColor = UIColor.purple
+        v.delegate = self
         return v
     }()
     
@@ -46,7 +48,12 @@ class HomeViewController: UIViewController, PageTitleViewDelegate {
         pageContentV.setCurrentIndex(index)
     }
     
-    // MARK - UI
+    // MARK: - PageContentViewDelegate
+    func pageContentVeiw(_ view: PageContentView, didScroll progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleV.scrollTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+    // MARK: - UI
     private func setupUI() {
         // 不自动调整 scrollView 的偏移量
         automaticallyAdjustsScrollViewInsets = false

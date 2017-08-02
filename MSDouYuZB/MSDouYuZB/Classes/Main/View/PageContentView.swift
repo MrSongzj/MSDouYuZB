@@ -10,10 +10,21 @@ import UIKit
 
 private let contentCellID = "contentCellID"
 
-class PageContentView: UIView, UICollectionViewDataSource {
+protocol PageContentViewDelegate: class {
+    func pageContentVeiw(_ view: PageContentView,didScroll progress: CGFloat, sourceIndex: Int, targetIndex: Int)
+}
+
+class PageContentView: UIView,
+UICollectionViewDataSource,
+UICollectionViewDelegate
+{
     // MARK: - 属性
     private let childVCs: [UIViewController]
     private unowned let parentVC: UIViewController
+    private var sourceIndex = 0
+    private var lastOffsetX: CGFloat = 0
+    private var isPassDelegate = false
+    weak var delegate: PageContentViewDelegate?
     
     private lazy var collectionV: UICollectionView = {
         // 创建 layout
@@ -27,7 +38,9 @@ class PageContentView: UIView, UICollectionViewDataSource {
         v.showsHorizontalScrollIndicator = false
         v.isPagingEnabled = true
         v.frame = self.bounds
+        v.bounces = false
         v.dataSource = self
+        v.delegate = self
         v.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
 
         return v
@@ -48,6 +61,7 @@ class PageContentView: UIView, UICollectionViewDataSource {
     
     // MARK: - Publick Methods
     func setCurrentIndex(_ index: Int) {
+        isPassDelegate = true
         let offset = CGFloat(index) * collectionV.frame.size.width
         collectionV.setContentOffset(CGPoint(x: offset, y: 0), animated: false)
     }
@@ -68,6 +82,67 @@ class PageContentView: UIView, UICollectionViewDataSource {
         cell.contentView.addSubview(vc.view)
         
         return cell
+    }
+    
+    // MARK: - UICollectionViewDelegate
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isPassDelegate = false
+        sourceIndex = Int(scrollView.contentOffset.x / collectionV.frame.width)
+        lastOffsetX = scrollView.contentOffset.x
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if isPassDelegate { return }
+        
+        let currentOffsetX = scrollView.contentOffset.x
+        let w = collectionV.frame.width
+        let sourceOffsetX = CGFloat(sourceIndex)*w
+        let dif = currentOffsetX - sourceOffsetX
+        let progress = min(abs(dif / w), 1)
+        
+        var targetIndex = 0
+        // 当差值等于 0 时，需要判断方向才可以确定 targetIndex
+        if dif == 0 {
+            // 通过上一次的 x 偏移量来确定方向
+            let lastDif = lastOffsetX - sourceOffsetX
+            targetIndex = lastDif > 0 ? sourceIndex+1 : sourceIndex-1
+        } else {
+            targetIndex = dif > 0 ? sourceIndex+1 : sourceIndex-1
+        }
+        delegate?.pageContentVeiw(self, didScroll: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+//        print(progress, sourceIndex, targetIndex)
+        // 进度等于 1 的时候更新 sourceIndex
+        if progress == 1 {
+            sourceIndex = targetIndex
+        }
+        lastOffsetX = currentOffsetX
+        
+//        var progress: CGFloat = 0
+//        var sourceIndex = 0
+//        var targetIndex = 0
+//        
+//        let currentOffsetX = scrollView.contentOffset.x
+//        let scrollViewW = scrollView.bounds.width
+//        if currentOffsetX > startOffsetX {
+//            progress = currentOffsetX/scrollViewW - floor(currentOffsetX/scrollViewW)
+//            sourceIndex = Int(currentOffsetX/scrollViewW)
+//            targetIndex = sourceIndex + 1
+//            if targetIndex >= childVCs.count {
+//                targetIndex = childVCs.count - 1
+//            }
+//            if currentOffsetX - startOffsetX == scrollViewW {
+//                progress = 1
+//                targetIndex = sourceIndex
+//            }
+//        } else {
+//            progress = 1 - (currentOffsetX/scrollViewW - floor(currentOffsetX/scrollViewW))
+//            targetIndex = Int(currentOffsetX/scrollViewW)
+//            sourceIndex = targetIndex + 1
+//            if sourceIndex >= childVCs.count {
+//                sourceIndex = childVCs.count - 1
+//            }
+//        }
+//        delegate?.pageContentVeiw(self, didScroll: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+//        print(progress, sourceIndex, targetIndex)
     }
     
     // MARK: - UI
