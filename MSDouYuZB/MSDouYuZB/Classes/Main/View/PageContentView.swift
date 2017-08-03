@@ -19,6 +19,7 @@ UICollectionViewDataSource,
 UICollectionViewDelegate
 {
     // MARK: - 属性
+    
     private let childVCs: [UIViewController]
     private unowned let parentVC: UIViewController
     private var sourceIndex = 0
@@ -47,6 +48,7 @@ UICollectionViewDelegate
     }()
 
     // MARK: - 构造器
+    
     init(frame: CGRect, childVCs: [UIViewController], parentVC: UIViewController) {
         self.childVCs = childVCs
         self.parentVC = parentVC
@@ -85,6 +87,7 @@ UICollectionViewDelegate
     }
     
     // MARK: - UICollectionViewDelegate
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isPassDelegate = false
         sourceIndex = Int(scrollView.contentOffset.x / collectionV.frame.width)
@@ -115,37 +118,10 @@ UICollectionViewDelegate
             sourceIndex = targetIndex
         }
         lastOffsetX = currentOffsetX
-        
-//        var progress: CGFloat = 0
-//        var sourceIndex = 0
-//        var targetIndex = 0
-//        
-//        let currentOffsetX = scrollView.contentOffset.x
-//        let scrollViewW = scrollView.bounds.width
-//        if currentOffsetX > startOffsetX {
-//            progress = currentOffsetX/scrollViewW - floor(currentOffsetX/scrollViewW)
-//            sourceIndex = Int(currentOffsetX/scrollViewW)
-//            targetIndex = sourceIndex + 1
-//            if targetIndex >= childVCs.count {
-//                targetIndex = childVCs.count - 1
-//            }
-//            if currentOffsetX - startOffsetX == scrollViewW {
-//                progress = 1
-//                targetIndex = sourceIndex
-//            }
-//        } else {
-//            progress = 1 - (currentOffsetX/scrollViewW - floor(currentOffsetX/scrollViewW))
-//            targetIndex = Int(currentOffsetX/scrollViewW)
-//            sourceIndex = targetIndex + 1
-//            if sourceIndex >= childVCs.count {
-//                sourceIndex = childVCs.count - 1
-//            }
-//        }
-//        delegate?.pageContentVeiw(self, didScroll: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
-//        print(progress, sourceIndex, targetIndex)
     }
     
     // MARK: - UI
+    
     private func setupUI() {
         for childVC in childVCs {
             parentVC.addChildViewController(childVC)

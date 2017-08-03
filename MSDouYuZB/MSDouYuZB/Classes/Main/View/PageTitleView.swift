@@ -20,6 +20,7 @@ protocol PageTitleViewDelegate: class {
 class PageTitleView: UIView {
     
     // MARK: - 属性
+    
     private let titles: [String]
     private var titleLBs = [UILabel]()
     private var currentIndex = 0
@@ -39,6 +40,7 @@ class PageTitleView: UIView {
     }()
 
     // MARK: - 构造器
+    
     init(frame: CGRect, titles: [String]) {
         self.titles = titles
         super.init(frame: frame)
@@ -51,6 +53,7 @@ class PageTitleView: UIView {
     }
     
     // MARK: - Publick Methods
+    
     // 滑动 titleView
     func scrollTitle(progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         
@@ -71,14 +74,13 @@ class PageTitleView: UIView {
     }
     
     // MARK: - Actions
+    
      @objc private func tapLB(sender: UITapGestureRecognizer) {
         guard let tapLB = sender.view as? UILabel else { return }
         guard tapLB.tag != currentIndex  else { return }
         
         // 改变颜色
         tapLB.textColor = kHighlightColor
-//        let lastLB = titleLBs[currentIndex]
-//        lastLB.textColor = kNormalColor
         for lb in titleLBs {
             if lb !== tapLB {
                 lb.textColor = kNormalColor
@@ -96,6 +98,7 @@ class PageTitleView: UIView {
     }
     
     // MARK: - UI
+    
     private func setupUI() {
         scrollV.frame = bounds
         addSubview(scrollV)
@@ -117,7 +120,7 @@ class PageTitleView: UIView {
         scrollLine.frame = CGRect(x: lb.frame.origin.x, y: frame.size.height - scrollLineH, width: lb.frame.size.width, height: scrollLineH)
     }
     
-    /// 配置标题视图
+    // 配置标题视图
     private func setupTitles() {
         let w = frame.size.width / CGFloat(self.titles.count)
         for (index, title) in titles.enumerated() {

@@ -23,10 +23,11 @@ PageContentViewDelegate
     
     private lazy var pageContentV: PageContentView = {
         // 设置 frame
-        let frame = CGRect(x: 0, y: kNavigationBarBottom + kPageTitleVH, width: kScreenW, height: kScreenH - kNavigationBarBottom - kPageTitleVH)
+        let frame = CGRect(x: 0, y: kNavigationBarBottom + kPageTitleVH, width: kScreenW, height: kScreenH - kNavigationBarBottom - kPageTitleVH - kTabBarH)
         // 添加自控制器
         var vcs = [UIViewController]()
-        for _ in 0..<4 {
+        vcs.append(RecommendViewController())
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             vcs.append(vc)
