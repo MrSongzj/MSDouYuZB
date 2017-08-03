@@ -24,6 +24,8 @@ class RecommendViewController: UIViewController,
 {
     // MARK: - 属性
     
+    private lazy var presenter = RecommendPresenter()
+    
     private lazy var collectionV: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
@@ -51,6 +53,13 @@ class RecommendViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        loadData()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func loadData() {
+        presenter.requestData()
     }
     
     // MARK: - UICollectionViewDataSource
