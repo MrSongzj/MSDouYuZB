@@ -23,6 +23,8 @@ class TVCate: BaseModel {
     }
     /// 组标题
     var tag_name = ""
+    /// 组默认图标
+    var icon_name = "home_header_normal"
     /// 组图标
-    var icon_name = ""
+    var small_icon_url = ""
 }

@@ -35,6 +35,11 @@
 		068215B71F33246300F43F2C /* TVCate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215B61F33246300F43F2C /* TVCate.swift */; };
 		068215B91F33248F00F43F2C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215B81F33248F00F43F2C /* BaseModel.swift */; };
 		068215BB1F33276900F43F2C /* TVRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215BA1F33276900F43F2C /* TVRoom.swift */; };
+		068215BE1F345A0E00F43F2C /* ScrollCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215BC1F345A0E00F43F2C /* ScrollCycleView.swift */; };
+		068215BF1F345A0E00F43F2C /* ScrollCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068215BD1F345A0E00F43F2C /* ScrollCycleView.xib */; };
+		068215C11F346D6300F43F2C /* ScrollCycleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215C01F346D6300F43F2C /* ScrollCycleItem.swift */; };
+		068215C41F3479CE00F43F2C /* ScrollCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215C21F3479CE00F43F2C /* ScrollCycleCell.swift */; };
+		068215C51F3479CE00F43F2C /* ScrollCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068215C31F3479CE00F43F2C /* ScrollCycleCell.xib */; };
 		77B7051BC76EA22DADBDD87F /* Pods_MSDouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,11 @@
 		068215B61F33246300F43F2C /* TVCate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCate.swift; sourceTree = "<group>"; };
 		068215B81F33248F00F43F2C /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		068215BA1F33276900F43F2C /* TVRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVRoom.swift; sourceTree = "<group>"; };
+		068215BC1F345A0E00F43F2C /* ScrollCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollCycleView.swift; sourceTree = "<group>"; };
+		068215BD1F345A0E00F43F2C /* ScrollCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollCycleView.xib; sourceTree = "<group>"; };
+		068215C01F346D6300F43F2C /* ScrollCycleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollCycleItem.swift; sourceTree = "<group>"; };
+		068215C21F3479CE00F43F2C /* ScrollCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollCycleCell.swift; sourceTree = "<group>"; };
+		068215C31F3479CE00F43F2C /* ScrollCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollCycleCell.xib; sourceTree = "<group>"; };
 		8A91A73EC1D4199DCFD2BCD9 /* Pods-MSDouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EF108528C757F0DFFAD388 /* Pods-MSDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +240,7 @@
 				068215B81F33248F00F43F2C /* BaseModel.swift */,
 				068215B61F33246300F43F2C /* TVCate.swift */,
 				068215BA1F33276900F43F2C /* TVRoom.swift */,
+				068215C01F346D6300F43F2C /* ScrollCycleItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +255,10 @@
 				068215A81F32A91E00F43F2C /* CollectionNormalCell.xib */,
 				068215AB1F32C58B00F43F2C /* CollectionPrettyCell.swift */,
 				068215AC1F32C58B00F43F2C /* CollectionPrettyCell.xib */,
+				068215BC1F345A0E00F43F2C /* ScrollCycleView.swift */,
+				068215BD1F345A0E00F43F2C /* ScrollCycleView.xib */,
+				068215C21F3479CE00F43F2C /* ScrollCycleCell.swift */,
+				068215C31F3479CE00F43F2C /* ScrollCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +399,7 @@
 				TargetAttributes = {
 					061AA6391F2ADA06000BF15E = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = H9VJQ5J8K3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -418,7 +434,9 @@
 				061AA65C1F2B12C9000BF15E /* Live.storyboard in Resources */,
 				068215A61F32A4A800F43F2C /* HomeSectionHeaderView.xib in Resources */,
 				061AA65A1F2B12B4000BF15E /* Home.storyboard in Resources */,
+				068215C51F3479CE00F43F2C /* ScrollCycleCell.xib in Resources */,
 				068215AE1F32C58B00F43F2C /* CollectionPrettyCell.xib in Resources */,
+				068215BF1F345A0E00F43F2C /* ScrollCycleView.xib in Resources */,
 				061AA6611F2B1318000BF15E /* Profile.storyboard in Resources */,
 				061AA65F1F2B1302000BF15E /* Follow.storyboard in Resources */,
 			);
@@ -481,13 +499,16 @@
 			files = (
 				068215A51F32A4A800F43F2C /* HomeSectionHeaderView.swift in Sources */,
 				061AA63E1F2ADA06000BF15E /* AppDelegate.swift in Sources */,
+				068215BE1F345A0E00F43F2C /* ScrollCycleView.swift in Sources */,
 				061AA66B1F2B1DC6000BF15E /* MainViewController.swift in Sources */,
+				068215C41F3479CE00F43F2C /* ScrollCycleCell.swift in Sources */,
 				068215A21F317D8F00F43F2C /* RecommendViewController.swift in Sources */,
 				0654AAA51F2EBDE700174D77 /* PageTitleView.swift in Sources */,
 				068215B51F331FAA00F43F2C /* NSDate(Extension).swift in Sources */,
 				068215BB1F33276900F43F2C /* TVRoom.swift in Sources */,
 				0654AAA91F2F06D400174D77 /* PageContentView.swift in Sources */,
 				0654AAA31F2B2B7900174D77 /* UIBarButtonItem(Extension).swift in Sources */,
+				068215C11F346D6300F43F2C /* ScrollCycleItem.swift in Sources */,
 				061AA6761F2B1EAD000BF15E /* HomeViewController.swift in Sources */,
 				0654AAAD1F2F0E5000174D77 /* UIColor(Extension).swift in Sources */,
 				068215AD1F32C58B00F43F2C /* CollectionPrettyCell.swift in Sources */,
@@ -640,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = H9VJQ5J8K3;
 				INFOPLIST_FILE = MSDouYuZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -655,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = H9VJQ5J8K3;
 				INFOPLIST_FILE = MSDouYuZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeSectionHeaderView: UICollectionReusableView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var cate: TVCate? {
+        didSet {
+            guard let cate = cate else { return }
+            
+            icon.kf.setImage(with: URL(string: cate.small_icon_url), placeholder: UIImage(named: cate.icon_name))
+            title.text = cate.tag_name
+        }
     }
     
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var title: UILabel!
 }

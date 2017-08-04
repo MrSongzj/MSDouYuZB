@@ -62,6 +62,7 @@ UICollectionViewDelegate
     }
     
     // MARK: - Publick Methods
+    
     func setCurrentIndex(_ index: Int) {
         isPassDelegate = true
         let offset = CGFloat(index) * collectionV.frame.size.width
@@ -69,6 +70,7 @@ UICollectionViewDelegate
     }
     
     // MARK: - UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVCs.count
     }

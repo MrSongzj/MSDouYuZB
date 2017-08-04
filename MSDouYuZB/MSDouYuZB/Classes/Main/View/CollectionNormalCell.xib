@@ -69,7 +69,13 @@
                 <constraint firstItem="WZo-7O-qUd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yMV-gZ-xs0"/>
             </constraints>
             <size key="customSize" width="520" height="382"/>
-            <point key="canvasLocation" x="-88" y="2"/>
+            <connections>
+                <outlet property="nicknameLB" destination="B7u-wT-EJe" id="Dpo-It-DjA"/>
+                <outlet property="onlineBTN" destination="CBc-SA-QVS" id="YEi-3K-Wzd"/>
+                <outlet property="screenIMGV" destination="WZo-7O-qUd" id="5do-P1-kak"/>
+                <outlet property="titleLB" destination="gUG-a9-qI2" id="NW6-06-D9u"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="-12"/>
         </collectionViewCell>
     </objects>
     <resources>

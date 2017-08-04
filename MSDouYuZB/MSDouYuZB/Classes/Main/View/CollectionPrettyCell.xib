@@ -72,6 +72,12 @@
                 <constraint firstAttribute="bottom" secondItem="0wh-Ar-dn3" secondAttribute="bottom" constant="10" id="xVG-FD-ffW"/>
             </constraints>
             <size key="customSize" width="199" height="199"/>
+            <connections>
+                <outlet property="locationBTN" destination="0wh-Ar-dn3" id="ZfM-4x-FRn"/>
+                <outlet property="nicknameLB" destination="Wjw-wB-hYd" id="QgC-99-Oc9"/>
+                <outlet property="onlineLB" destination="jNt-8e-Sfm" id="yx1-QZ-Psm"/>
+                <outlet property="screenIMGV" destination="wPa-JP-ze1" id="6Za-IZ-soR"/>
+            </connections>
             <point key="canvasLocation" x="-49.5" y="-0.5"/>
         </collectionViewCell>
     </objects>

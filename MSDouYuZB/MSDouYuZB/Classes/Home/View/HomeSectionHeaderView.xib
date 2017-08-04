@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HomeSectionHeaderView" customModule="MSDouYuZB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -27,6 +27,10 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_hot" translatesAutoresizingMaskIntoConstraints="NO" id="Nml-Fg-aNR">
                             <rect key="frame" x="10" y="11" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="1mU-Ts-xU8"/>
+                                <constraint firstAttribute="width" constant="18" id="CGF-Og-hKh"/>
+                            </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-wz-6tt">
                             <rect key="frame" x="33" y="11" width="33" height="19.5"/>
@@ -62,6 +66,10 @@
                 <constraint firstAttribute="bottom" secondItem="3gB-wB-Yzq" secondAttribute="bottom" id="nv0-s7-x2S"/>
                 <constraint firstItem="ANj-yq-Cxn" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="uwY-ev-wxh"/>
             </constraints>
+            <connections>
+                <outlet property="icon" destination="Nml-Fg-aNR" id="G6W-WA-3EC"/>
+                <outlet property="title" destination="bS4-wz-6tt" id="Ufz-NF-NpA"/>
+            </connections>
         </collectionReusableView>
     </objects>
     <resources>
