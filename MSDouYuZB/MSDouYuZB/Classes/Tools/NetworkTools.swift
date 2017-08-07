@@ -23,7 +23,7 @@ class NetworkTools {
          responseCallback: ((Any) -> Void)? = nil)
     {
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        Alamofire.request(URLString, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
             if let result = response.result.value {
                 if let callback = responseCallback {
                     callback(result)
