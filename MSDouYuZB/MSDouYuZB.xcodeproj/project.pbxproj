@@ -44,6 +44,7 @@
 		068215F01F383D8400F43F2C /* RecommendCateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068215EF1F383D8400F43F2C /* RecommendCateView.xib */; };
 		068215F51F384E6200F43F2C /* RecommendCateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215F31F384E6200F43F2C /* RecommendCateCell.swift */; };
 		068215F61F384E6300F43F2C /* RecommendCateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068215F41F384E6200F43F2C /* RecommendCateCell.xib */; };
+		068215F81F3865F200F43F2C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215F71F3865F200F43F2C /* GameViewController.swift */; };
 		77B7051BC76EA22DADBDD87F /* Pods_MSDouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		068215EF1F383D8400F43F2C /* RecommendCateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCateView.xib; sourceTree = "<group>"; };
 		068215F31F384E6200F43F2C /* RecommendCateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCateCell.swift; sourceTree = "<group>"; };
 		068215F41F384E6200F43F2C /* RecommendCateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCateCell.xib; sourceTree = "<group>"; };
+		068215F71F3865F200F43F2C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8A91A73EC1D4199DCFD2BCD9 /* Pods-MSDouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EF108528C757F0DFFAD388 /* Pods-MSDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				061AA6751F2B1EAD000BF15E /* HomeViewController.swift */,
 				068215A11F317D8F00F43F2C /* RecommendViewController.swift */,
+				068215F71F3865F200F43F2C /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				068215A51F32A4A800F43F2C /* HomeSectionHeaderView.swift in Sources */,
 				068215F51F384E6200F43F2C /* RecommendCateCell.swift in Sources */,
 				061AA63E1F2ADA06000BF15E /* AppDelegate.swift in Sources */,
+				068215F81F3865F200F43F2C /* GameViewController.swift in Sources */,
 				068215BE1F345A0E00F43F2C /* ScrollCycleView.swift in Sources */,
 				061AA66B1F2B1DC6000BF15E /* MainViewController.swift in Sources */,
 				068215C41F3479CE00F43F2C /* ScrollCycleCell.swift in Sources */,

@@ -59,4 +59,11 @@ extension UIColor {
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
         return (r, g, b, a)
     }
+    
+    /// 随机颜色
+    ///
+    /// - Returns: 颜色对象
+    static func randomColor() -> UIColor {
+        return UIColor(r: CGFloat(arc4random_uniform(256)), g: CGFloat(arc4random_uniform(256)), b: CGFloat(arc4random_uniform(256)))
+    }
 }
