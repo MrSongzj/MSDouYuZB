@@ -9,8 +9,8 @@
 import UIKit
 
 private let kItemMargin: CGFloat = 10
-private let kItemW: CGFloat = (kScreenW - 2*kItemMargin)/3
-private let kNormalItemH: CGFloat = kItemW * 6/5
+private let kGameItemW: CGFloat = (kScreenW - 2*kItemMargin)/3
+private let kGmaeItemH: CGFloat = kGameItemW * 6/5
 private let kHeaderH: CGFloat = 50
 
 private let kCateVH: CGFloat = 90
@@ -26,7 +26,7 @@ UICollectionViewDataSource
     private lazy var collectionV: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
+        layout.itemSize = CGSize(width: kGameItemW, height: kGmaeItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)

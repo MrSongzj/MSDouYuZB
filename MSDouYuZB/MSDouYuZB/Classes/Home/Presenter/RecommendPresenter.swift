@@ -8,11 +8,14 @@
 
 import Foundation
 
-class RecommendPresenter {
+class RecommendPresenter:
+    BaseTVCateVCDataSource
+{
     
     // MARK: - 属性
     
     lazy var tvCateArr = [TVCate]()
+    
     lazy var scrollCycleItemArr = [ScrollCycleItem]()
     
     // MARK: - Public Methods
