@@ -43,7 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBc-SA-QVS">
-                        <rect key="frame" x="170" y="139.5" width="67" height="16"/>
+                        <rect key="frame" x="178" y="140.5" width="59" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="6666在线" image="Image_online">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,7 +79,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Image_online" width="16" height="16"/>
+        <image name="Image_online" width="8" height="8"/>
         <image name="Img_default" width="172" height="103"/>
         <image name="home_live_cate_normal" width="14" height="14"/>
     </resources>

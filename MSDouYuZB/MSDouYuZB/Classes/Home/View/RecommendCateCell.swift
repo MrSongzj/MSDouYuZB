@@ -13,7 +13,7 @@ class RecommendCateCell: UICollectionViewCell {
     @IBOutlet weak var iconIMGV: UIImageView!
     @IBOutlet weak var nameLB: UILabel!
     
-    var cate: TVCate? {
+    var cate: TVCateProtocol? {
         didSet {
             nameLB.text = cate?.tag_name
             if let url = URL(string: cate?.icon_url ?? "") {

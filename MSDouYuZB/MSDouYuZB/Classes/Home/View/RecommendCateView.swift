@@ -16,17 +16,8 @@ UICollectionViewDataSource
     
     @IBOutlet weak var collectionV: UICollectionView!
     
-    var cateArr: [TVCate]? {
+    var cateArr: [TVCateProtocol]? {
         didSet {
-            // 移除热门和颜值分类
-            cateArr?.removeFirst()
-            cateArr?.removeFirst()
-            // 追加更多分类
-            let cate = TVCate()
-            cate.tag_name = "更多"
-            
-            cateArr?.append(cate)
-            
             collectionV.reloadData()
         }
     }

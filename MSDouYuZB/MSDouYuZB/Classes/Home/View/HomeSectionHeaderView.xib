@@ -29,7 +29,7 @@
                             <rect key="frame" x="10" y="11" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="1mU-Ts-xU8"/>
-                                <constraint firstAttribute="width" constant="18" id="CGF-Og-hKh"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="18" id="CGF-Og-hKh"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS4-wz-6tt">
@@ -67,8 +67,9 @@
                 <constraint firstItem="ANj-yq-Cxn" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="uwY-ev-wxh"/>
             </constraints>
             <connections>
-                <outlet property="icon" destination="Nml-Fg-aNR" id="G6W-WA-3EC"/>
-                <outlet property="title" destination="bS4-wz-6tt" id="Ufz-NF-NpA"/>
+                <outlet property="iconIMGV" destination="Nml-Fg-aNR" id="l57-jM-gdL"/>
+                <outlet property="moreBTN" destination="81Z-3Q-HXf" id="IF3-Wg-8XW"/>
+                <outlet property="titleLB" destination="bS4-wz-6tt" id="kaT-s4-9BO"/>
             </connections>
         </collectionReusableView>
     </objects>

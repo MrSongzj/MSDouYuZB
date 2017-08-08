@@ -79,7 +79,16 @@ class RecommendViewController: UIViewController,
             // 展示各个分类的直播数据
             self?.collectionV.reloadData()
             // 展示推荐的分类数据
-            self?.cateV.cateArr = self?.presenter.tvCateArr
+            // 移除热门和颜值分类
+            var cateArr = self?.presenter.tvCateArr
+            cateArr?.removeFirst()
+            cateArr?.removeFirst()
+            // 追加更多分类
+            let cate = TVCate()
+            cate.tag_name = "更多"
+            
+            cateArr?.append(cate)
+            self?.cateV.cateArr = cateArr
         }
         // 请求循环轮播数据
         presenter.requestScrollCycleData {[weak self] in

@@ -11,15 +11,24 @@ import Kingfisher
 
 class HomeSectionHeaderView: UICollectionReusableView {
 
+    // MARK: - 属性
+    
     var cate: TVCate? {
         didSet {
             guard let cate = cate else { return }
             
-            icon.kf.setImage(with: URL(string: cate.small_icon_url), placeholder: UIImage(named: cate.icon_name))
-            title.text = cate.tag_name
+            iconIMGV.kf.setImage(with: URL(string: cate.small_icon_url), placeholder: UIImage(named: cate.icon_name))
+            titleLB.text = cate.tag_name
         }
     }
     
-    @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var moreBTN: UIButton!
+    @IBOutlet weak var iconIMGV: UIImageView!
+    @IBOutlet weak var titleLB: UILabel!
+    
+    // MARK: - 构造器
+    
+    static func getView() -> HomeSectionHeaderView {
+        return Bundle.main.loadNibNamed("HomeSectionHeaderView", owner: nil, options: nil)?.first as! HomeSectionHeaderView
+    }
 }

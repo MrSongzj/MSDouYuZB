@@ -25,8 +25,7 @@ class RecommendPresenter {
             guard let dataArray = responseData["data"] as? [[String: NSObject]] else { return }
             // 遍历数组里的字典，转成 model 对象
             for dict in dataArray {
-                let item = ScrollCycleItem(dict: dict)
-                self.scrollCycleItemArr.append(item)
+                self.scrollCycleItemArr.append(ScrollCycleItem(dict: dict))
             }
             // 回调
             if let callback = responseCallback {
@@ -53,8 +52,7 @@ class RecommendPresenter {
             guard let dataArray = responseData["data"] as? [[String: NSObject]] else { return }
             // 遍历数组里的字典，转成 model 对象
             for dict in dataArray {
-                let tvRoom = TVRoom(dict: dict)
-                hotCate.roomArr.append(tvRoom)
+                hotCate.roomArr.append(TVRoom(dict: dict))
             }
             // 离开组
             group.leave()

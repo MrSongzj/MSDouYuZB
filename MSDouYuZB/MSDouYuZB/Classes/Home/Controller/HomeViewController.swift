@@ -28,7 +28,8 @@ PageContentViewDelegate
         var vcs = [UIViewController]()
         vcs.append(RecommendViewController())
         vcs.append(GameViewController())
-        for _ in 0..<2 {
+        vcs.append(AmuseViewController())
+        for _ in 0..<1 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.randomColor()
             vcs.append(vc)

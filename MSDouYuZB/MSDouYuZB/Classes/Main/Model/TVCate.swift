@@ -8,7 +8,9 @@
 
 import UIKit
 
-class TVCate: BaseModel {
+class TVCate: BaseModel,
+TVCateProtocol
+{
     // 房间模型数组
     var roomArr = [TVRoom]()
     // 该组中对应的房间信息

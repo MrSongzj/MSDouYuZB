@@ -45,6 +45,10 @@
 		068215F51F384E6200F43F2C /* RecommendCateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215F31F384E6200F43F2C /* RecommendCateCell.swift */; };
 		068215F61F384E6300F43F2C /* RecommendCateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068215F41F384E6200F43F2C /* RecommendCateCell.xib */; };
 		068215F81F3865F200F43F2C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215F71F3865F200F43F2C /* GameViewController.swift */; };
+		068215FA1F393BE800F43F2C /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215F91F393BE800F43F2C /* GamePresenter.swift */; };
+		068215FC1F393D8700F43F2C /* GameCateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215FB1F393D8700F43F2C /* GameCateModel.swift */; };
+		068215FE1F395AA900F43F2C /* TVCateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215FD1F395AA900F43F2C /* TVCateProtocol.swift */; };
+		068216001F39670E00F43F2C /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215FF1F39670E00F43F2C /* AmuseViewController.swift */; };
 		77B7051BC76EA22DADBDD87F /* Pods_MSDouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		068215F31F384E6200F43F2C /* RecommendCateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCateCell.swift; sourceTree = "<group>"; };
 		068215F41F384E6200F43F2C /* RecommendCateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCateCell.xib; sourceTree = "<group>"; };
 		068215F71F3865F200F43F2C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		068215F91F393BE800F43F2C /* GamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		068215FB1F393D8700F43F2C /* GameCateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCateModel.swift; sourceTree = "<group>"; };
+		068215FD1F395AA900F43F2C /* TVCateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCateProtocol.swift; sourceTree = "<group>"; };
+		068215FF1F39670E00F43F2C /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		8A91A73EC1D4199DCFD2BCD9 /* Pods-MSDouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EF108528C757F0DFFAD388 /* Pods-MSDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 				061AA6751F2B1EAD000BF15E /* HomeViewController.swift */,
 				068215A11F317D8F00F43F2C /* RecommendViewController.swift */,
 				068215F71F3865F200F43F2C /* GameViewController.swift */,
+				068215FF1F39670E00F43F2C /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +246,8 @@
 		061AA6661F2B1D5E000BF15E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				068215FB1F393D8700F43F2C /* GameCateModel.swift */,
+				068215FD1F395AA900F43F2C /* TVCateProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				068215B21F33176200F43F2C /* RecommendPresenter.swift */,
+				068215F91F393BE800F43F2C /* GamePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -524,9 +536,13 @@
 				068215C41F3479CE00F43F2C /* ScrollCycleCell.swift in Sources */,
 				068215A21F317D8F00F43F2C /* RecommendViewController.swift in Sources */,
 				0654AAA51F2EBDE700174D77 /* PageTitleView.swift in Sources */,
+				068215FC1F393D8700F43F2C /* GameCateModel.swift in Sources */,
 				068215B51F331FAA00F43F2C /* NSDate(Extension).swift in Sources */,
 				068215BB1F33276900F43F2C /* TVRoom.swift in Sources */,
 				0654AAA91F2F06D400174D77 /* PageContentView.swift in Sources */,
+				068216001F39670E00F43F2C /* AmuseViewController.swift in Sources */,
+				068215FE1F395AA900F43F2C /* TVCateProtocol.swift in Sources */,
+				068215FA1F393BE800F43F2C /* GamePresenter.swift in Sources */,
 				0654AAA31F2B2B7900174D77 /* UIBarButtonItem(Extension).swift in Sources */,
 				068215C11F346D6300F43F2C /* ScrollCycleItem.swift in Sources */,
 				061AA6761F2B1EAD000BF15E /* HomeViewController.swift in Sources */,
