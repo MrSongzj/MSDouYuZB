@@ -13,6 +13,12 @@ class AmuseMenuCell: UICollectionViewCell,
 {
     // MARK: - 属性
     
+    var cateArr: [TVCateProtocol]? {
+        didSet {
+            collectionV.reloadData()
+        }
+    }
+    
     @IBOutlet weak var collectionV: UICollectionView!
     
     // MARK: - Life Cycle
@@ -29,12 +35,13 @@ class AmuseMenuCell: UICollectionViewCell,
     // MARK: - UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return cateArr?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCateCell", for: indexPath) as! RecommendCateCell
-        cell.backgroundColor = UIColor.randomColor()
+        cell.cate = cateArr![indexPath.row]
+        cell.clipsToBounds = true
         
         return cell
     }

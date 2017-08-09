@@ -31,6 +31,10 @@ class AmuseViewController: BaseTVCateViewController
         
         presenter.requestAmuseData {
             self.collectionV.reloadData()
+            // 设置菜单数据
+            var cateArr = self.presenter.tvCateArr
+            cateArr.removeFirst()
+            self.menuV.cateArr = cateArr
         }
     }
     
