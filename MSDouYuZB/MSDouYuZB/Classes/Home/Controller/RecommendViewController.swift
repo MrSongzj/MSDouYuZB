@@ -40,7 +40,9 @@ class RecommendViewController: BaseTVCateViewController,
         dataSource = presenter
         
         // 请求直播数据
+        showLoading()
         presenter.requestTVData { [weak self] in
+            self?.hideLoading()
             // 展示各个分类的直播数据
             self?.collectionV.reloadData()
             // 展示推荐的分类数据
@@ -87,7 +89,6 @@ class RecommendViewController: BaseTVCateViewController,
     override func setupUI() {
         super.setupUI()
         
-        collectionV.delegate = self
         collectionV.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         
         collectionV.addSubview(scrollCycleV)

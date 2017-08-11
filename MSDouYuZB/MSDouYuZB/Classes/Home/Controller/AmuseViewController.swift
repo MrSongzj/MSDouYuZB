@@ -29,7 +29,10 @@ class AmuseViewController: BaseTVCateViewController
         
         dataSource = presenter
         
+        showLoading()
         presenter.requestAmuseData {
+            self.hideLoading()
+            
             self.collectionV.reloadData()
             // 设置菜单数据
             var cateArr = self.presenter.tvCateArr

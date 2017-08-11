@@ -72,7 +72,9 @@ UICollectionViewDataSource
     // MARK: - Private Methods
     
     func loadData() {
+        showLoading()
         self.presenter.requestGameCate {
+            self.hideLoading()
             // 展示所有游戏分类
             self.collectionV.reloadData()
             // 展示常用游戏分类

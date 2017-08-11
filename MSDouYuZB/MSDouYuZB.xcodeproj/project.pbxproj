@@ -50,6 +50,9 @@
 		068215FE1F395AA900F43F2C /* TVCateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215FD1F395AA900F43F2C /* TVCateProtocol.swift */; };
 		068216001F39670E00F43F2C /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068215FF1F39670E00F43F2C /* AmuseViewController.swift */; };
 		068216021F39911400F43F2C /* AmusePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068216011F39911400F43F2C /* AmusePresenter.swift */; };
+		06A0DD5C1F3D7FE700D171D2 /* NormalRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DD5B1F3D7FE700D171D2 /* NormalRoomViewController.swift */; };
+		06A0DD5E1F3D7FF600D171D2 /* ShowRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DD5D1F3D7FF600D171D2 /* ShowRoomViewController.swift */; };
+		06A0DD631F3D8A9100D171D2 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A0DD621F3D8A9100D171D2 /* CustomNavigationController.swift */; };
 		06D8F61F1F399F9100F2EB9B /* BaseTVCateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F61E1F399F9100F2EB9B /* BaseTVCateViewController.swift */; };
 		06D8F6231F39B38C00F2EB9B /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F6221F39B38C00F2EB9B /* AmuseMenuView.swift */; };
 		06D8F6251F39B39900F2EB9B /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D8F6241F39B39900F2EB9B /* AmuseMenuView.xib */; };
@@ -57,6 +60,7 @@
 		06D8F6291F39BF9500F2EB9B /* AmuseMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D8F6271F39BF9500F2EB9B /* AmuseMenuCell.xib */; };
 		06D8F62B1F3AAB9800F2EB9B /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F62A1F3AAB9800F2EB9B /* FunnyViewController.swift */; };
 		06D8F62D1F3AACE300F2EB9B /* FunnyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F62C1F3AACE300F2EB9B /* FunnyPresenter.swift */; };
+		06D8F6371F3C0AAD00F2EB9B /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F6361F3C0AAD00F2EB9B /* UIViewController+Loading.swift */; };
 		77B7051BC76EA22DADBDD87F /* Pods_MSDouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +110,9 @@
 		068215FD1F395AA900F43F2C /* TVCateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCateProtocol.swift; sourceTree = "<group>"; };
 		068215FF1F39670E00F43F2C /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		068216011F39911400F43F2C /* AmusePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmusePresenter.swift; sourceTree = "<group>"; };
+		06A0DD5B1F3D7FE700D171D2 /* NormalRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalRoomViewController.swift; sourceTree = "<group>"; };
+		06A0DD5D1F3D7FF600D171D2 /* ShowRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRoomViewController.swift; sourceTree = "<group>"; };
+		06A0DD621F3D8A9100D171D2 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		06D8F61E1F399F9100F2EB9B /* BaseTVCateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTVCateViewController.swift; sourceTree = "<group>"; };
 		06D8F6221F39B38C00F2EB9B /* AmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
 		06D8F6241F39B39900F2EB9B /* AmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 		06D8F6271F39BF9500F2EB9B /* AmuseMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuCell.xib; sourceTree = "<group>"; };
 		06D8F62A1F3AAB9800F2EB9B /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		06D8F62C1F3AACE300F2EB9B /* FunnyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyPresenter.swift; sourceTree = "<group>"; };
+		06D8F6361F3C0AAD00F2EB9B /* UIViewController+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		8A91A73EC1D4199DCFD2BCD9 /* Pods-MSDouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.release.xcconfig"; sourceTree = "<group>"; };
 		94E8BB3A00F8CCC18716B45A /* Pods_MSDouYuZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSDouYuZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EF108528C757F0DFFAD388 /* Pods-MSDouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSDouYuZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSDouYuZB/Pods-MSDouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		061AA6511F2AE7CA000BF15E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				06A0DD561F3D7F7F00D171D2 /* Room */,
 				061AA6551F2AE7CA000BF15E /* Main */,
 				061AA6531F2AE7CA000BF15E /* Home */,
 				061AA6541F2AE7CA000BF15E /* Live */,
@@ -278,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				061AA66A1F2B1DC6000BF15E /* MainViewController.swift */,
+				06A0DD621F3D8A9100D171D2 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +393,7 @@
 				0654AAA21F2B2B7900174D77 /* UIBarButtonItem(Extension).swift */,
 				0654AAAC1F2F0E5000174D77 /* UIColor(Extension).swift */,
 				068215B41F331FAA00F43F2C /* NSDate(Extension).swift */,
+				06D8F6361F3C0AAD00F2EB9B /* UIViewController+Loading.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,6 +407,47 @@
 				06D8F62C1F3AACE300F2EB9B /* FunnyPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		06A0DD561F3D7F7F00D171D2 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				06A0DD571F3D7F7F00D171D2 /* Controller */,
+				06A0DD581F3D7F7F00D171D2 /* Model */,
+				06A0DD591F3D7F7F00D171D2 /* Presenter */,
+				06A0DD5A1F3D7F7F00D171D2 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		06A0DD571F3D7F7F00D171D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06A0DD5B1F3D7FE700D171D2 /* NormalRoomViewController.swift */,
+				06A0DD5D1F3D7FF600D171D2 /* ShowRoomViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		06A0DD581F3D7F7F00D171D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06A0DD591F3D7F7F00D171D2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		06A0DD5A1F3D7F7F00D171D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C0A3030A3729773200228199 /* Frameworks */ = {
@@ -562,6 +614,7 @@
 				061AA66B1F2B1DC6000BF15E /* MainViewController.swift in Sources */,
 				068215C41F3479CE00F43F2C /* ScrollCycleCell.swift in Sources */,
 				068215A21F317D8F00F43F2C /* RecommendViewController.swift in Sources */,
+				06A0DD5C1F3D7FE700D171D2 /* NormalRoomViewController.swift in Sources */,
 				0654AAA51F2EBDE700174D77 /* PageTitleView.swift in Sources */,
 				068215FC1F393D8700F43F2C /* GameCateModel.swift in Sources */,
 				06D8F6231F39B38C00F2EB9B /* AmuseMenuView.swift in Sources */,
@@ -569,6 +622,7 @@
 				068215BB1F33276900F43F2C /* TVRoom.swift in Sources */,
 				0654AAA91F2F06D400174D77 /* PageContentView.swift in Sources */,
 				068216001F39670E00F43F2C /* AmuseViewController.swift in Sources */,
+				06A0DD5E1F3D7FF600D171D2 /* ShowRoomViewController.swift in Sources */,
 				068215FE1F395AA900F43F2C /* TVCateProtocol.swift in Sources */,
 				068215FA1F393BE800F43F2C /* GamePresenter.swift in Sources */,
 				0654AAA31F2B2B7900174D77 /* UIBarButtonItem(Extension).swift in Sources */,
@@ -585,6 +639,8 @@
 				068215B71F33246300F43F2C /* TVCate.swift in Sources */,
 				06D8F6281F39BF9500F2EB9B /* AmuseMenuCell.swift in Sources */,
 				0654AAA71F2ECE2800174D77 /* Constant.swift in Sources */,
+				06D8F6371F3C0AAD00F2EB9B /* UIViewController+Loading.swift in Sources */,
+				06A0DD631F3D8A9100D171D2 /* CustomNavigationController.swift in Sources */,
 				06D8F62D1F3AACE300F2EB9B /* FunnyPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,8 @@ protocol BaseTVCateVCDataSource {
 }
 
 class BaseTVCateViewController: UIViewController,
-    UICollectionViewDataSource
+    UICollectionViewDataSource,
+    UICollectionViewDelegate
 {
     
     // MARK: - 属性
@@ -40,6 +41,7 @@ class BaseTVCateViewController: UIViewController,
         let collectionV = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionV.backgroundColor = UIColor.white
         collectionV.dataSource = self
+        collectionV.delegate = self
         collectionV.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         collectionV.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
@@ -82,6 +84,18 @@ class BaseTVCateViewController: UIViewController,
         view.cate = dataSource.tvCateArr[indexPath.section]
         
         return view
+    }
+    
+    // MARK: - UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let room = dataSource.tvCateArr[indexPath.section].roomArr[indexPath.row]
+        room.isVertical == 0 ?
+            // push 普通房间
+            navigationController?.pushViewController(NormalRoomViewController(), animated: true)
+            :
+            // present 秀场房间
+            present(ShowRoomViewController(), animated: true, completion: nil)
     }
     
     // MARK: - UI

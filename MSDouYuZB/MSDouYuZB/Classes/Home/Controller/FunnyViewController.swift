@@ -19,7 +19,10 @@ class FunnyViewController: BaseTVCateViewController {
     override func loadData() {
         dataSource = presenter
         
-        presenter.requestFunnyData { 
+        showLoading()
+        presenter.requestFunnyData {
+            self.hideLoading()
+            
             self.collectionV.reloadData()
         }
     }

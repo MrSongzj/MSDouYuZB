@@ -15,7 +15,7 @@ class TVRoom: BaseModel {
     var vertical_src = ""
     /// 判断是手机直播还是电脑直播
     // 0: 电脑直播 1: 手机直播
-    var isVertival = 0
+    var isVertical = 0
     /// 房间名称
     var room_name = ""
     /// 主播昵称
